@@ -8,4 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
   name = '';
+  obj = {
+    name: 'isaac',
+    age: 23,
+  };
+  arr = ['abc', 'def', 'ghi'];
+  isTrue = true;
+  myName = 'De';
 }
