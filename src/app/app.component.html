@@ -1,23 +1,12 @@
-<div class="container">
-  <h3>Mr {{ obj.name }} at Age {{ obj.age }}</h3>
-  <div class="col-sm-4">
-<a routerLink="/member/">Member</a>
-<a routerLink="/product/">Product</a>
-<br>
-  </div>
-  <div class="col-sm-8">
-    {{ arr[1] }}
-    <router-outlet>
-
-    </router-outlet>
-    <hr>
-    <ul>
-    <li *ngFor="let i of arr">{{ i }}</li>
-    </ul>
-    <hr>
-    <p *ngIf="!isTrue; then firstTemplate else secondTemplate">Hello World</p>
-    <ng-template #firstTemplate>First template</ng-template>
-    <ng-template #secondTemplate>Second Template</ng-template>
-    <p *ngIf="myName !== 'Deq'">No i am {{ myName }}</p>
-  </div>
+<div class="main">
+  <h1>Items List</h1>
+  <div class="addItem">
+    <input [(ngModel)] = 'newItem' type="text" placeholder="Add Item" name="" id="" class="addText">
+    <button (click)="pushItem()">Add</button>
+  <ul>
+    <li *ngFor="let i of items let ind = index" >{{i}}
+      <span (click)="removeItem(ind)">x</span></li>
+  </ul>
 </div>
+</div>
+

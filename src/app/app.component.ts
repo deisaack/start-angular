@@ -15,4 +15,15 @@ export class AppComponent {
   arr = ['abc', 'def', 'ghi'];
   isTrue = true;
   myName = 'De';
+  items = ['Angular', 'React', 'Json'];
+  newItem = 'x';
+  pushItem = function () {
+    if (this.newItem !== '') {
+      this.items.push(this.newItem);
+      this.newItem = '';
+    }
+  };
+  removeItem = function (index) {
+    this.items.splice(index, 1);
+  };
 }
