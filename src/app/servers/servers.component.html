@@ -1,0 +1,23 @@
+<hr>
+<label for="">ONE WAY BOUND</label>
+<input type="text"
+       class="form-control"
+       (input)="onUpdateServerName($event)"
+> <br>
+<label for="">TWO WAY BOUND</label>
+<input type="text"
+       class="form-control"
+       [(ngModel)]="serverName"
+>
+<!--<p>{{ serverName }}</p>-->
+<button class="btn btn-primary" [disabled]="!allowNewServer"
+ (click)="onCreateServer()">Add Server</button> <br>
+<p [innerText]="allowNewServer"></p>
+<p>{{ serverCreationStatus }}</p>
+<hr>
+<p *ngIf="serverCreated; else noServer">The server was created. The name is {{ serverName }}</p>
+<ng-template #noServer><p>
+    Waiting for creation
+</p></ng-template>
+<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
