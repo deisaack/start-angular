@@ -6,24 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-  name = '';
-  obj = {
-    name: 'isaac',
-    age: 23,
-  };
-  arr = ['abc', 'def', 'ghi'];
-  isTrue = true;
-  myName = 'De';
-  items = ['Angular', 'React', 'Json'];
-  newItem = 'x';
-  pushItem = function () {
-    if (this.newItem !== '') {
-      this.items.push(this.newItem);
-      this.newItem = '';
-    }
-  };
-  removeItem = function (index) {
-    this.items.splice(index, 1);
-  };
+  arr = [3, 5, 8, 4, 9];
+  name = 'De isaac';
+  day = new Date(1996, 7, 15);
 }

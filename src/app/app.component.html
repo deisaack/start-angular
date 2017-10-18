@@ -1,12 +1,17 @@
 <div class="main">
-  <h1>Items List</h1>
-  <div class="addItem">
-    <input [(ngModel)] = 'newItem' type="text" placeholder="Add Item" name="" id="" class="addText">
-    <button (click)="pushItem()">Add</button>
-  <ul>
-    <li *ngFor="let i of items let ind = index" >{{i}}
-      <span (click)="removeItem(ind)">x</span></li>
-  </ul>
-</div>
+  <h1>Pipes</h1>
+  <h3>{{ name | uppercase }}</h3>
+  <h3>{{ name | lowercase }}</h3>
+  <h3>{{ day }}</h3>
+  <hr>
+  <h3>{{ day | date }}</h3>
+  <h3>{{ day | date: 'shortDate' }}</h3>
+  <h3>{{ day | date:'fullDate' }}</h3>
+  <h3>{{ day | date:'fullDate' | uppercase }}</h3>
+  <hr>
+  <p>{{ arr }}</p>
+  <p>{{ arr | sort: 'ascending' }}</p>
+  <p>{{ arr | sort: 'descending' }}</p>
+
 </div>
 

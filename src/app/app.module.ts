@@ -8,9 +8,11 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { ProductsComponent } from './products/products.component';
 import { MembersComponent } from './members/members.component';
+import { SortPipe} from './app.sort';
 
 @NgModule({
   declarations: [
+    SortPipe,
     AppComponent,
     ServerComponent,
     ServersComponent,
